@@ -23,6 +23,15 @@ export class SignUp extends Component {
             placeholder="Enter your email here..."
           />
           <br />
+          <label htmlFor="usernameInput">
+            Username: <br />
+          </label>
+          <input
+            type="text"
+            id="usernameInput"
+            placeholder="Enter your username here..."
+          />
+          <br />
           <label htmlFor="passwordInput">
             Password: <br />
           </label>

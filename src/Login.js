@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Header from "./Components/Header";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import axios from "axios";
 
 const PageStyling = styled.div`
   * {
@@ -11,18 +12,30 @@ const PageStyling = styled.div`
 `;
 
 export class Login extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { username: "", password: "" };
+  }
+
+  handleUsernameInput = e => {
+    this.setState({ username: e.target.value });
+  };
+
   render() {
     return (
       <PageStyling>
         <Header />
         <form>
-          <label htmlFor="emailInput">
-            Email Address: <br />
+          <label htmlFor="usernameInput">
+            Username: <br />
           </label>
           <input
-            type="email"
-            id="emailInput"
-            placeholder="Enter your email here..."
+            type="text"
+            id="usernameInput"
+            placeholder="Enter your username here..."
+            value={this.state.username}
+            onChange={this.handleUsernameInput}
           />
           <br />
           <label htmlFor="passwordInput">
