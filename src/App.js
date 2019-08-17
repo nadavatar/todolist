@@ -6,6 +6,7 @@ function App() {
     <div className="App">
       <Header />
       <p>This is where the todos will be rendered</p>
+      <div className="todosContainer" />
     </div>
   );
 }

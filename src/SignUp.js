@@ -1,16 +1,14 @@
 import React, { Component } from "react";
 import Header from "./Components/Header";
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
 
 const PageStyling = styled.div`
   * {
     text-align: center;
-    place-items: center;
   }
 `;
 
-export class Login extends Component {
+export class SignUp extends Component {
   render() {
     return (
       <PageStyling>
@@ -36,15 +34,9 @@ export class Login extends Component {
           <br />
           <input type="submit" id="submitButton" />
         </form>
-        <div>
-          <p id="small">Dont have an account yet?</p>
-          <NavLink to="/signup" id="redirect">
-            Sign Up
-          </NavLink>
-        </div>
       </PageStyling>
     );
   }
 }
 
-export default Login;
+export default SignUp;
